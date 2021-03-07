@@ -85,7 +85,7 @@ int dequeue(Queue *Q){
                 check_input(topay);
                 break;
             default:
-                printf("\n=== No order in menu ===\n");
+                printf("\n*** No order in the menu ***/n/n");
                 break;
             }
         return topay;
