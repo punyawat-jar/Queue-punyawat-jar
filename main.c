@@ -10,10 +10,16 @@ int main(int argc , char **argv){
     Q.tailPtr=NULL;
     Q.size=0;
     int i,topay,n=1;
+
     for(i=1;i<argc;i++){
         if(strcmp(argv[i],"x")==0){
-            printf("Customer No.%d\n",n++);
-            topay=dequeue(&Q);
+            if(Q.size>0){
+                printf("Customer No.%d\n",n++);
+                topay=dequeue(&Q);
+            }
+            else{
+                printf("\n*** NO ORDER ***\n");
+            }
         }
         else{
             enqueue(&Q, atoi(argv[i]),atoi(argv[i+1]));
